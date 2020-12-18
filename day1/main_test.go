@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var testNumbers = []int {1721, 979, 366, 299, 675, 1456}
+var testNumbers = []int{1721, 979, 366, 299, 675, 1456}
 
 func TestFindAndMultiplyTwoNumbers(t *testing.T) {
 	assert.Equal(t, 514579, findAndMultiplyTwoNumbers(testNumbers))

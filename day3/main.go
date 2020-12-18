@@ -30,7 +30,7 @@ func countTrees(areaMap [][]string, right, down int) int {
 	return trees
 }
 
-func multiplyTrees(areaMap[][]string) int {
+func multiplyTrees(areaMap [][]string) int {
 	total := 1
 	for _, slope := range slopes {
 		trees := countTrees(areaMap, slope[0], slope[1])

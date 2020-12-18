@@ -21,8 +21,6 @@ var areaMap = [][]string{
 	strings.Split(".#..#...#.#", ""),
 }
 
-
-
 func TestCountTrees(t *testing.T) {
 	assert.Equal(t, 7, countTrees(areaMap, 3, 1))
 }
@@ -30,4 +28,3 @@ func TestCountTrees(t *testing.T) {
 func TestMultiplyTrees(t *testing.T) {
 	assert.Equal(t, 336, multiplyTrees(areaMap))
 }
-
