@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var input = []string{
+var input1 = []string{
 	"light red bags contain 1 bright white bag, 2 muted yellow bags.",
 	"dark orange bags contain 3 bright white bags, 4 muted yellow bags.",
 	"bright white bags contain 1 shiny gold bag.",
@@ -18,7 +18,22 @@ var input = []string{
 	"dotted black bags contain no other bags.",
 }
 
+var input2 = []string{
+	"shiny gold bags contain 2 dark red bags.",
+	"dark red bags contain 2 dark orange bags.",
+	"dark orange bags contain 2 dark yellow bags.",
+	"dark yellow bags contain 2 dark green bags.",
+	"dark green bags contain 2 dark blue bags.",
+	"dark blue bags contain 2 dark violet bags.",
+	"dark violet bags contain no other bags.",
+}
+
 func TestCanContainBag(t *testing.T) {
 	state := make(map[string]bool)
-	assert.Equal(t, 4, canContainBag(state, input, "shiny gold"))
+	assert.Equal(t, 4, canContainBag(state, input1, target))
+}
+
+func TestCountAllBags(t *testing.T) {
+	assert.Equal(t, 32, countAllBags(input1, target))
+	assert.Equal(t, 126, countAllBags(input2, target))
 }
